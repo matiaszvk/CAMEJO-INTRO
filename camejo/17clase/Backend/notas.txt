@@ -1,0 +1,19 @@
+"CADA VEZ QUE CIERRE EL BACK CON CRTL + C SE ME REINICIA TODO Y NO QUEDAN 
+GUARDADOS POR EJEMPLO LOS ENDPOINTS POST"
+(NO QUEDAN GUARDADOS LOS LENGUAJES QUE AGREGUE CON POST)
+
+Usa forEach() cuando solo necesites recorrer el arreglo y realizar alguna acción 
+(como imprimir en la consola o hacer cambios en una variable externa), pero sin 
+necesidad de devolver un nuevo arreglo.
+
+Usa filter() cuando necesites crear un nuevo arreglo que contenga 
+solo los elementos que cumplen con una condición.
+
+Usa un bucle for cuando necesites tener el máximo control sobre el ciclo, realizar 
+múltiples acciones, o manipular directamente el arreglo.
+
+"   FILTER DEVUELVE UN ARREGLO EN CAMBIO FOREACH NO, SOLO FILTRA"
+
+"USO CORRECTO DE UNA API, HAY QUE PONER UNA CONDCION CUANDO EN UN PUT (MODIFICAR ELEMENTO)
+EN LA CUAL DECLARE INDEFINIDO A UN ELEMENTO SI NO SE ESPECIFICO SU CAMBIO"
+

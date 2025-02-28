@@ -1,0 +1,94 @@
+docker compose up -d
+docker ps 
+
+--------para entrar al conatiner------------
+"el nombre del contenedor se crea segun el fomrato de carpetas usado"
+docker exec -it clase_sql-postgres-1 /bin/bash      ---del profe----
+docker exec -it 18clase-postgres-1 /bin/bash        ---mio---
+
+---------acceder a postgress---------
+psql -U postgres
+64481425
+
+
+------------------------COMANDOS PSQL----------------------------------
+
+mostrar la base de datos creada:
+\l
+
+conectarse directamente a una base de datos:
+psql -U postgres -d nombre de la base de datos
+
+insertar datos de una columna
+insert into mejores_alumnos 
+(id, nombre, apellido, es_de_san_lorenzo, edad)
+values
+(5, 'añañemby', '', true , 40)
+
+ordenar tabla:
+el order by por defecto ordena ascendentemente
+order by dni asc
+order by dni desc
+
+where:
+nos permite agregar una condicion para los resultados de una busqueda
+
+and:
+para poner mas de una condicion para los resultados de una busqueda
+
+or:
+tambien existe el or
+
+ma:
+el alias nos permite filtrar por columnas como si fuera un Struct
+ej:
+where ma.dni = 1
+
+updare y set para agregar contenido a las columnas
+UPDATE nombre_tabla
+SET columna1 = valor1, columna2 = valor2, ...
+OJO: esto cambia todo, por eso hay que poner una condicion con WHERE
+
+delete para eliminar
+delete from mejores_alumnos
+where dni = 4459595
+
+-----------------------------------------------------------------------------------------------------------------
+                           PRIMARY KEY
+
+Hay que poner un id que sea unico
+
+
+ej:
+create table helados (
+    id int primary key,
+    gusto varchar(100),
+    precio_kg int
+)
+
+primary key hace que no podamos poner id iguales
+
+CREATE TABLE estudiantes (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100) UNIQUE,    -- Nombre único, puede haber solo un estudiante con ese nombre
+    edad INT
+);
+
+----------------------------------------------------------------------------------------------------------------
+
+                            FOREIGN KEY
+
+la clave foranea es un campo que relaciona una tabla con otra
+usando la clave primaria (PRIMARY KEY) de la otra tavla
+sigue la regla de integridad referencial
+
+------------------------------------------------------------------------------------------------------------
+
+1. Buscar los magikarps
+
+SELECT * from trainers_pokemon trainers_pokemonwhere 
+pokename = 'magikarp'
+order by pokelevel desc
+limit 1
+
+limit: limita las filas

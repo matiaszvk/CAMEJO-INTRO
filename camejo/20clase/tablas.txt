@@ -1,0 +1,20 @@
+3 tablas:
+
+users: 
+-id
+-name
+-money
+-selected_character
+
+characters:
+
+-id
+-name
+-power_level
+-price
+
+unlockedCharacters:
+-user_id
+-character_id
+
+TENEMOS CRUD DE: USERTS Y CHRACTERS

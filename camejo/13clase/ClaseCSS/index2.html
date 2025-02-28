@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Clase CSS</title>
+  </head>
+  <body>
+    <main>
+      <section class="home">
+        <h1>Top Gatitos Épicos</h1>
+        <div class="container">
+          <div class="card">
+            <img src="./assets/hawulin.jpg" class="card__img" />
+            <h2>Halloween</h2>
+            <div class="card__info-container">
+              <p class="card__info-title">Comentario</p>
+              <p>It's spooky season</p>
+            </div>
+            <div class="card__info-container">
+              <p class="card__info-title">Rareza</p>
+              <div class="card__rating-container">
+                <img src="./assets/estrella.png" class="card__rating-img" />
+                <img src="./assets/estrella.png" class="card__rating-img" />
+                <img src="./assets/estrella.png" class="card__rating-img" />
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="./assets/trigonometria.PNG" class="card__img" />
+            <h2>Matemático</h2>
+            <div class="card__info-container">
+              <p class="card__info-title">Comentario</p>
+              <p>It's spooky season</p>
+            </div>
+            <div class="card__info-container">
+              <p class="card__info-title">Rareza</p>
+              <div class="card__rating-container">
+                <img src="./assets/estrella.png" class="card__rating-img" />
+                <img src="./assets/estrella.png" class="card__rating-img" />
+                <img src="./assets/estrella.png" class="card__rating-img" />
+                <img src="./assets/estrella.png" class="card__rating-img" />
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="./assets/7am.png" class="card__img" alt="7AM" />
+            <h2>El Profe a las 7AM</h2>
+            <div class="card__info-container">
+              <p class="card__info-title">Comentario</p>
+              <p>It's spooky season</p>
+            </div>
+            <div class="card__info-container">
+              <p class="card__info-title">Rareza</p>
+              <div class="card__rating-container">
+                <img src="./assets/estrella.png" class="card__rating-img" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cat-form">
+        <form>
+          <div class="form__group">
+            <label> Nombre </label>
+            <input type="text" name="name" required />
+          </div>
+          <div class="form__group">
+            <label> Contraseña </label>
+            <input type="password" name="pwd" required />
+          </div>
+          <div class="form__group">
+            <label> Fecha de nacimiento </label>
+            <input type="date" name="date" required />
+          </div>
+
+          <div>
+            <label> Escoja su satisfacción con la clase </label>
+            <div>
+              <label>1</label>
+              <input type="radio" name="satisfaccion" value="1" />
+            </div>
+            <div>
+              <label>2</label>
+              <input type="radio" name="satisfaccion" value="2" />
+            </div>
+            <div>
+              <label>3</label>
+              <input type="radio" name="satisfaccion" value="3" />
+            </div>
+          </div>
+
+          <div>
+            <label> Foto de perfil </label>
+            <input type="file" name="archivo" accept="image/*" />
+          </div>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+    <!-- <footer>Introducción al Desarrollo de Software - Curso Camejo</footer> -->
+  </body>
+</html>

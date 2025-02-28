@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+    >        
+  </head>
+  <body>
+    <div class="container is-fluid">
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="index.html">CAMEJO</a>
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="users.html">Usuarios</a>
+            <a class="navbar-item" href="characters.html">Personajes</a>
+          </div>
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-primary" href="create-character.html"><strong>new character</strong></a>
+                <a class="button is-light">??</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <h1>PERSONAJES</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Poder</th>
+            <th>Precio</th>
+            <th>Borrar</th>
+          </tr>
+        </thead>
+        <tbody id="personajes-data"></tbody>
+      </table>
+    </div>
+    <script>
+      // Llamo a la funcion showCharacters
+      window.onload = function() {
+        showCharacters();
+      }
+
+      showCharacters = function() {
+        fetch('http://localhost:3000/api/v1/characters')
+          .then(response => response.json())
+          .then(characters => {
+            console.log(users);
+            
+            let index = 1;
+            let table = document.getElementById('personajes-data');
+            //limpiamos
+            table.innerHTML = '';
+            characters.forEach(character => {
+              // Esto es lo que creariamos  
+              // <tr>
+              // <th>1</th>
+              // <td>Goku</td>
+              // <td>23</td>
+              // <td>222</td>
+              // <td><button class="button is-danger">delete</button></td>
+              // </tr>
+
+              let tr = document.createElement('tr');
+              tr.id = 'character-' + character.id;//hace que cada fila tenga un id
+              let indexEl = document.createElement('th');
+              indexEl.textContent = indexEl++;
+              let id = document.createElement('td');
+              id.textContent = character.id;
+              let name = document.createElement('td');
+              name.textContent = character.name;
+              let poder = document.createElement('td');
+              poder.textContent = character.power;
+              let precio = document.createElement('td');
+              precio.textContent = character.price;
+
+              let borrar = document.createElement('td');
+              let button = document.createElement('button');
+              button.textContent = 'Borrar';
+              button.className = 'button is-danger is-small';
+              button.onclick = function() {
+                deleteCharacter();
+              };
+
+              borrar.appendChild(button);
+              tr.appendChild(indexEl);
+              tr.appendChild(id);
+              tr.appendChild(name);
+              tr.appendChild(poder);
+              tr.appendChild(precio);
+              tr.appendChild(borrar);
+              table.appendChild(tr);
+            });
+          });
+      }
+
+      deleteCharacter = function(id) {
+        alert('Borrando personaje ' + id);
+        fetch('http://localhost:3000/api/v1/characters/' + id, {
+          method: 'DELETE'
+        })
+          .then(response => response.json())
+          .then(response => {
+            console.log(response);
+            showCharacters();
+          });
+      }
+    </script>
+  </body>
+</html>

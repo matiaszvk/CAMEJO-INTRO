@@ -1,0 +1,45 @@
+docker build -t alias .
+
+-t sirve para ponerlee un alias a nuesrro proyecto
+
+
+
+docker rm -vf $(docker ps -aq)
+"sirve para matar todas las imagenes"
+
+instrucciones:
+
+
+1. docker build -t node-app .
+
+"construimos la imagen"
+
+
+2. docker run -p 9000:3000 node-app
+
+"levantamos la imagen en el puerto 9000
+-p le asigmoas al puerto para que no quede aisaldo
+asi para poder comunicarse con el exterior
+9000 es el puerto en tu máquina local (host).
+3000 es el puerto dentro del contenedor.
+
+
+3. docker stop hash 
+
+"se para la imagen"
+
+4. docker run -p 9000:3000 node-app
+
+"se vuelve a correr la imagen"
+
+--------------------------------------------------------------------------------
+PARA CAMBIAR EL PROYECTO Y PARA QUE IMPACTEN LOS CAMBIOS SE HACE
+
+docker build --no-cache -t node-app .
+
+docker ps           Para encontrar el ID del contenedor
+docker stop ID      Detenerlo
+docker rm ID        Eliminarlo
+
+docker run -p 9000:3000 node-app
+--------------------------------------------------------------------------------

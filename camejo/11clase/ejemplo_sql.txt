@@ -1,0 +1,2 @@
+laburmaos con imagenes externas.
+base de datos sql

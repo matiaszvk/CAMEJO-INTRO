@@ -1,0 +1,83 @@
+DOCKER: 
+es un proyecto de código abierto que automatiza
+el despliegue de aplicaciones dentro de contenedores
+de software
+
+CONTENEDOR:
+un contenedor continee el codigo y las dependencias
+necesarias para correr una aplciacion de manera
+independiente
+
+IMAGEN: esta compuesta por (puese ser creada o descargada)
+-OS 
+sistema operativo (version de ubuntu por ej)
+-SOFTWARE
+perimite correr la aplciacion (apache, php, etc)
+-APP 
+el codigo de nuestra aplciacion
+
+CONTENEDOR VS IMAGEN
+un conteiner es cuando se esta ejecutando 
+una imagen es el conjunto que define depedencias y codigo
+
+¿COMO GENERAMOS UNA IMAGEN? con dockerfiles
+
+DOCKERFILE
+es un archvio que tiene una serie de instrucciones que
+indican como crear una imagen.
+una vez hecho el dockerfile hacemos lo sig para
+correr el contenedor:
+-DOCKER BUILD
+generamos una imagen
+-DOCKER RUN
+hacemos correr al contenedor 
+
+---------------------------------------------------------------
+          imagenes en docker y docker run
+
+docker run imagen
+-descarga la ultima version
+docker run imagen:1.44
+-descarga una version especifica
+
+OJO: hay que mandar un comando extra, este que manda 
+una variable al contenedor para que se autoconfigure
+la forma correcta seria asi:
+
+docker run -e NOMBRE_VARIABLE=valor imagen
+
+----------------------------------------------------------------
+          comandos mas comunes en docker
+
+docker run imagen
+-corre una imagen
+-ejecuta un contenedor nuevo a partir de una imagen
+
+docker pull imagen
+-descarga la imagen pero no la corre
+
+docker images
+-lista las imagenes descargadas
+
+docker ps  
+-muestra los contenedores que estan corriendo o 
+
+docker ps 
+-muestra los contenedores que corrieron
+
+docker start id(hash del contenedor)
+-recuperar datos de un contenedro borrado
+
+docker logs hash
+-ver la salida (codigo) del contenedor
+
+docker exec -it hash
+-ejecuta un comando dentro de un conteiner que esta corriendo
+-el -i crea una sesion interactiva
+-y el -t emula una terminal
+
+docker stop hash
+-detiene un contenedor
+
+docker run -d imagen
+-ejecuta un contenedor en segundo plano

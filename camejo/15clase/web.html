@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kokemones</title>
+</head>
+<body>
+    <h1>Lista de los primeros 151 Kokemones</h1>
+    <ul id="kokemones">
+
+    </ul>
+
+
+    <script>
+
+        fetch("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=151")
+            .then(jijo => jijo.json())
+            .then(jijaso =>{
+                let kokemones = jijaso.results;
+
+                let padre = document.getElementById("kokemones")
+
+        
+                kokemones.forEach(kokemon => {
+
+                    let li = document.createElement("li")
+
+                    let nombre = document.createElement("p")
+                    nombre.innerHTML = kokemon.name + " "
+
+                    let link = document.createElement("a")
+                    link.innerHTML = "link"
+                    link.href = "./kokemon.html?nombre=" + kokemon.name
+                    nombre.append(link)
+
+                    li.append(nombre)
+
+                    padre.append(li)
+                    
+                });
+            })
+    </script>
+</body>
+</html>

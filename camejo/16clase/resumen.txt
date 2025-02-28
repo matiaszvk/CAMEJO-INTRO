@@ -1,0 +1,91 @@
+-----------------------------FRONTEND---------------------------------
+Imposible de ocultar, siempre el cliente ve el codigo del front
+
+
+-----------------------------BACKEND---------------------------------------
+Lo que no ve el cliente
+
+
+------------HTTP Protocolo de Transferencia de Hipertexto-------------------
+
+Usa un Modelo: cliente - servidor
+
+
+--------------Flujo HTTP---- Peticiones----Response----------------------------
+
+
+---------------------------------CURL-------------------------------------
+
+
+> "sale"                 < "entra"
+
+matiasvk13@macmatvk13:~/camejo/16clase$ curl -v google.com.ar
+
+##############################################################################################
+* Host google.com.ar:80 was resolved.
+* IPv6: 2800:3f0:4002:801::2003
+* IPv4: 142.251.134.35
+*   Trying 142.251.134.35:80...
+* Connected to google.com.ar (142.251.134.35) port 80
+> GET / HTTP/1.1
+> Host: google.com.ar
+> User-Agent: curl/8.5.0
+> Accept: */*
+######################################## ESTO ES LO QUE LE ENVIO EL CLIENTE AL SERVIDOR
+
+#################################################################
+> 
+< HTTP/1.1 301 Moved Permanently
+< Location: http://www.google.com.ar/       #######SIRVE PARA QUE EL SERVIDOR SEPA A DONDE IR (header estandar)
+< Content-Type: text/html; charset=UTF-8
+< Content-Security-Policy-Report-Only: object-src 'none';base-uri 'self';script-src 'nonce-xeAXe7vmTcuSCJe8h_9wKQ' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp
+< Date: Mon, 18 Nov 2024 22:36:20 GMT
+< Expires: Wed, 18 Dec 2024 22:36:20 GMT
+< Cache-Control: public, max-age=2592000
+< Server: gws
+< Content-Length: 222
+< X-XSS-Protection: 0
+< X-Frame-Options: SAMEORIGIN
+< 
+############################################################# RESPUESTA DEL SERVIDOR (compuesto por headers)
+
+##################################################################################
+<HTML><HEAD><meta http-equiv="content-type" content="text/html;charset=utf-8">
+<TITLE>301 Moved</TITLE></HEAD><BODY>
+<H1>301 Moved</H1>
+The document has moved
+<A HREF="http://www.google.com.ar/">here</A>.
+</BODY></HTML>
+* Connection #0 to host google.com.ar left intact
+#####################################################################################
+
+
+TRUCAZO: se puede modificar el encabezado 
+
+curl -A "User-Agent personalizado" https://www.ejemplo.com
+"asi se podria entrar a una pagina que dice "necestias chrocme para entrar""
+
+
+------------------------------NPM-----------------------------------------------------
+
+al instalar node nos instala npm que trae bibliotecas, dependecias, etc que nos facilitan la vida
+
+
+
+--------------------------------NODEMON----------------------------------------------------
+ChatGPT dijo:
+ChatGPT
+
+Nodemon es una herramienta de desarrollo muy útil para aplicaciones Node.js. Su función principal es 
+monitorear los archivos del proyecto y reiniciar automáticamente el servidor
+
+
+
+
+----------------------------------FLAGS DE CURL---------------------------------------
+
+-L sirve para redireccionar forzadamente en curl pq curl por defecto no redirecciona
+Sigue redirecciones HTTP. Si el servidor responde
+con un código de redirección (301, 302, etc.), curl seguirá la nueva URL.
+
+curl -L 

@@ -1,0 +1,5 @@
+archivo_tareas="tareas.txt"
+
+read -p "ingrese el numero de tarea a eliminar" num_tarea
+sed -i "${num_tarea}d" "$archivo_tareas"
+echo "tarea eliminada"

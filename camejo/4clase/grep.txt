@@ -1,0 +1,44 @@
+GREP: permite buscar patrones dentro de los archivos especificados
+
+           grep [opciones] [patron/regex] [archivo]
+
+
+ALGUNAS OPCIONES CON GREP
+
+-i Ignora el case.
+-n Muestra el número de línea.
+-w Coincide solo con palabras completas, no con subcadenas.
+-v Muestra todas las líneas que NO contienen el patrón.
+-r Busca el patrón en todos los archivos dentro del directorio y sus subdirectorios.
+-c Muestra el número de líneas que contienen el patrón.
+-l Muestra solo los nombres de los archivos que contienen el patrón, no las líneas
+coincidentes.
+-o solo imprime la parte de la linea que coinide con la expresion regular.
+sirve para extraer un fragmento especifico
+
+
+
+FORMAS DE BUSCAR EN MAS DE UN ARCHIVO
+
+
+grep “ejemplo” archivo1.txt archivo2.txt archivo3.csv
+
+grep “ejemplo” *
+busca en toda la sala, no se va recursivamente
+
+grep “ejemplo” *.log
+busca todo lo que tenga determinada extension
+
+grep “ejemplo” ruta/a/directorio/*
+
+grep -r “ejemplo” .
+
+grep -r “ejemplo” ./ruta/a/directorio/
+
+
+
+MAS ESPECIFICACIONES
+-E paquete de regex estendido
+\| se puede usar esto sino para extender el | y que te lo tome como
+   un caracter especial de regex
+

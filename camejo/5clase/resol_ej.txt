@@ -1,0 +1,38 @@
+
+1 Sustitir todas las vocales del archivo texto.txt 
+
+1 rta:
+sed -E 's/a|e|i|o|u/lllllllllllllllll/g' texto.txt 
+
+1 rta(otra forma):
+sed -E 's/[aeiou]/8/g' texto.txt
+
+1 Si las letras fueran mayusculas
+1 rta: -E 's/[aeiou]/8/Ig' texto.txt
+
+--------------------------------------------------------------------------------
+
+2 Trransformar la notas de todos aquellos alumnos 
+  desaprobados (nota < 55) en un 55
+
+2 rta:  (todas son validas)
+ 
+sed -r 's/\b([0-4][0-9]|5[0-5])\b/55/g' notas.txt
+sed -r 's/\b([0-4][0-9])\b|\b(5[0-5])\b/55/g' notas.txt
+sed -r 's/\b[0-4][0-9]\b|5[0-5]\b/55/g' notas.txt
+
+------------------------------------------------------------------------------
+
+3 intercambiar las notas de gonzaa fonseca con las de nico en un solo comando
+
+3 rta: (esto es en 3 comandos)
+
+sed  's/a0x/nicolas riedel/Ig' lnotas.txt
+sed  's/gonzalo martinez sastre/nicolas riedel/Ig' lnotas.txt
+sed  's/a0x/gonzalo martinez sastre/Ig' lnotas.txt 
+
+3 rta:
+sed -e 's/nicolas riedel/a0x/Ig' -e 's/gonzalo martinez sastre/nicolas riedel/Ig'
+ -e 's/a0x/gonzalo martinez sastre/Ig' lnotas.txt
+
+

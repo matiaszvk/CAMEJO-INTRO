@@ -1,0 +1,65 @@
+OBJECT FIT (css)
+esto sirve para ajustar las imagenes y no queden para el orto
+-fill
+-cover
+-contain
+-none
+-scale-down
+
+----------------------------------------------------------------------------------------------------
+
+Guiarse con:
+
+Box Shadow generator: asi para probar online
+
+-------------------------------------------------------------------------------------------------------------------
+
+GOOGLE FONT: para buscar fuentes buenardas
+
+-buscar una piola y poenrla con el link
+
+------------------------------------------------------------------------------------------------------------------
+
+FORMULARIOS
+
+<form></form>
+<label></label
+<input/>
+    type="text"
+    type="password"
+    type="email"
+    type="checkbox"
+    type="radio"
+    type="file"
+    type="date"
+<textarea></textarea>
+<select></select> + <option></option>
+<button></button>
+<fieldset></fieldset> + <legend></legend>
+
+CHECKBOX es para elegir varias opciones 
+RADIO solo se puede elegir una opcion 
+-si no se cumple esto se hizo una cagada en la pagina
+
+TEXTAREA es un bloque gigante para esceibir 
+
+SELECT flechita desplegable con opciones
+
+BUTTON para desencadenar el submit
+
+FIELDSET dividir las partes cunado hay un formulario gigante
+LEGEND es el titulo por cada parte dividida
+
+OJO! a la hora de poner required la idea es que 
+el usuario al equivocarse le salten todos los 
+campos faltantes y no uno por uno
+
+-----------------------------------------------------------------------------------
+
+guia god
+
+https://css-tricks.com/guides/
+
+pagina ayuda god
+
+mdn css

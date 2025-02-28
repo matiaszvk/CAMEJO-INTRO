@@ -1,0 +1,3 @@
+docker desktop en linux lo que hacer es correr una 
+maquina virtual y adentro docker
+NO ES RECOMENDABLE EN LINUX

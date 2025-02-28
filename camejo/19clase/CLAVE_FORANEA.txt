@@ -1,0 +1,14 @@
+-------------------------------------------EJ------------------------------------------------------
+
+CREATE TABLE equipos (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100)
+);
+
+CREATE TABLE personas (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    fecha_nacimiento DATE NOT NULL,
+    hincha_de INT,
+    FOREIGN KEY (hincha_de) REFERENCES equipos(id)  -- Aquí estamos creando la clave foránea
+);

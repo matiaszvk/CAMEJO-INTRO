@@ -1,0 +1,84 @@
+Base de Datos: Herramienta para recopilar y organizar informacion
+Existen Relacionales y NO Relacionales
+
+---------------------------"PARTES"---------------------------------------
+
+-Base de datos: contenedor de objetos (tablas, vistas,etc)
+
+-Motor de base de datos. Nucleo del sistema, encargado del 
+almacenamiento y recuperacion de datos
+
+-Gestos de base de datos: software que interactua con la base de datos-
+
+----------------Motores de Base de datos------------------------------------------
+
+PostfreSQL: open source, potente y flexible
+
+MySQL: open source, ampliamente usado
+
+SQL Server:propio de Microsoft, enfocado en entornos empresariales
+
+
+------------------Gestores de base de datos-------------------------------------
+
+DBeaver: multiplataforma, interfaz grafica amigable
+
+pgAdmin: especifico para PostgreSQL
+
+MySQL Workbench: especifico para MySQL
+
+La propia TERMINAL
+
+
+--------------------SQL (Structured Query Language)---------------------------------
+
+Es el lenguaje estandar para gestionar bases de datos Relacionales, el mas usado
+
+Permite:
+-Crear y modificar bases de datos
+-Definir estructuras de tablas
+-Insertar, modificar y eliminar datos
+-Consultar info de manera eficiente
+
+
+-------------------Comandos basicos de SQL -1------------------------------------
+
+-CREATE DATABASE: crea una nueva base de datos
+ej
+CREATE DATABASE mi_base_de_datos;
+
+DROP DATABASE: elimina una base de datos existente
+ej
+DROP DATABASE mi_base_de_datos;
+
+CREATE TABLE: crea una nueva tablas
+ej
+CREATE TABLE clientes( id INT, nombre VARCHAR(50), apellido VARCHAR(50));
+
+DROP TABLE: elimina una tabla existente
+DROP TABLE clientes;
+
+INSERT INTO: inserta nuevos registros en una tabla
+ej
+INSERT INTO cleintes (id, nombre, apellido) -------serian las columnas: id, nombre, apellido
+VALUES (1, 'juan', 'perez');
+
+DELETE FROM: elimina registros de una tabla
+DELETE FROM clientes WHERE id = 1;
+
+UPDATE: modifica los valores de registros existentes
+UPDATE cleintes SET apellido = 'Osardo' WHERE id = 2;
+
+SELECT: extrae datos de una o mas tablas
+SELECT * FROm cleintes;
+
+
+Estructura del SELECT-----------------------------------------------------
+
+Para que la consulta (QUERY) sea efectiva hay que poner minimo 3 cosas:
+
+-SELECT: estrae datos de una o mas tablas
+-FROM: especifica la tabla de donde se extrearan los datos
+-WHERE: filtra los resultados segun una condicion
+
+SELECT nombre, apellido FROM clientes WHERE ciudad = 'Madird';

@@ -1,0 +1,80 @@
+:
+en la ruta (/api/v912/users/:id) indican un parámetro de ruta dinámico. 
+"en vez de que la ruta sea fija se converte en variable"
+
+
+Uso de params
+es un objeto que almacena parametros dinamicos definifos en la ruta
+"como por ej :id"
+se puede acceder a estos valores usando:
+req.params.<nombre_del_parametro>
+
+
+Redirecciones: se suelen hacer en el front cuando se cometio un error
+de usuario por ejemplo, esto no se hace en el back. 
+osea tras un error redireccionamos al usuario  a otra pagina que diga 
+por ejemplo error
+
+
+Se añadio a la carpeta dragonball de bruno para que cualqeuir usuario pueda
+importar la coleccion y asi no perder timpo en volver a hacer las request 
+con get para ver usuarios y usuario
+
+
+A la hora de crear no hace falta poner id, se crea automaticmanete.
+
+
+EN js {id:... nombre:.... apellido:....} eso es un OBJETO
+
+
+En el BACKEND siempre debo verificar el input de los usuarios
+
+
+
+FIND vs FINDINDEX
+find(): devuelve el elemento que cumple la condicion o undefined en caso contrario.
+Se usa cuando se necesita el valor del primer elemento que cumple la condicion.
+findIndex(): devuelve el indice del primer elemento que cumple la condicion o -1 caso contrario.
+Se usa cuando se necesita saber la posicion del primer elementoque cumple la condicion
+
+
+dokcer te usa todo el ancho de banda, liquida internet
+
+
+Si no pongo un VOLUMEN NO VA A HABER PERSISTENCIA DE DATOS CADA VEZ QUE REINICIE EL CONTEINER 
+
+
+PSQL_DATA recomendable ponerle en gitignore, esto se hace porque los DATOS
+no son parte de la logica del proyecto, osea no pertenecen los datos
+
+
+.env debe ir en gitignore por seguridad
+
+
+CUANDO USAR QUE.BODY Y CUANDO USAR REQ.params
+res.body: datos enviados por el cliente en el cuerpo de la solicitud 
+(util para POST,PUT,PATCH)
+res.params: parametros en la URL (util para identificar recursos
+especificos en las rutas, como un ID)
+
+
+
+Los parametros son strings en express por ende hay que parsearlos
+por ej el id a int
+
+
+OJO, SI HAY UN ERROR EN EL SCHEMA.PRISMA HAY QUE VOLVER A MANDAR LAS MIGRACIONES
+
+
+USO DE FOREINGKEY
+en prisma se usa algo diferente que nos permite luego 
+relacionar mas facil sin usar join y otras cosas densas
+
+PRISMA GENERA LA MIGRACION Y LA EJECUTA 
+
+
+
+
+
+
+2:20:50 FOREINGKEY

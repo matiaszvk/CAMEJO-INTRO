@@ -1,0 +1,90 @@
+TAREA 
+1- Poner un link que vuelva al listado
+2- mostrar mas info de pokemones, por ejemplo habilidades (son un array)
+3-mostrar de a 20 en el listado, con paginado (agregar 2 botones)
+
+
+
+
+
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+nombre para futuro proyecto vavion
+
+API (Aplication Program Interface)
+-permite que diferentes, lenguajes de programacion, aplicaciones o servicios se cominiquen entre si
+
+
+JSON (JavaScript Object Notation)
+-archivo "estandar" (no lo es del todo) por el cual se comunican las aplicaciones
+-ej: las aplicaciones devuelven como respuesta un JSON
+
+CURL
+-sirve para ver la respuesta de una pagina
+-ej: curl promiedo.com.ar (desde la terminal)
+
+
+
+-------------------------------------API Request---------------------------------------------------
+
+const pokemonURL = "https://pokeapi.co/api/v2/pokemon?limit=3&offset=0"
+
+fetch(pokemonURL) // fetch(URL)
+    .then(response => response.json()) //convierte la respuesta en JSON
+    .then(json => console.log(json))   // muestra los datos obtenidos en la consola
+
+-fetch en js se usa para solicitudes HTTP (ej: GET POST PUT DELETE) a un servidor y 
+obtener una respuesta.
+
+"FETCH por defecto hace una solicitud de tipo GET"
+
+2PEGARLE A UNA API ES HACERLE UNA PREGUNTA, CONSUMIENDO ESTA API"
+
+
+-------------------------------------EJ de FETCH--------------------------------------------------
+
+        fetch("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=151")
+            .then(response => response.json())
+            .then(datos =>{
+                let kokemones = datos.results;
+                let nombre = datos.results[0].name;
+                console.log(nombre)
+            })
+
+
+--------------------------------------------forEach-------------------------------------------
+
+el forEach sirve para recorrer los elementos de un array en vez de usar el for tradicional
+
+let numeros = [1, 2, 3, 4];
+
+numeros.forEach(function(valor, index, array) {
+  array[index] = valor * 2;
+});
+
+console.log(numeros);
+
+
+-----------------------------------Queri Params-----------------------------------------------
+
+https//www-exammpe.com/pikachu?colo=yellow&tipo=electrico
+
+son fragmentos de una URL que permiten enviar información 
+adicional a un servidor al realizar una solicitud web.
+
+
+ej: Estas dos líneas de código se utilizan para obtener los valores 
+de los parámetros en una query string de la URL.
+
+"sirve para agrarrar los parametros que estan en la URL"
+
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const myParam = urlParams.get('nombre');

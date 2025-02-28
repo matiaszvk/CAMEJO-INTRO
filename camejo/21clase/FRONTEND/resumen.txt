@@ -1,0 +1,19 @@
+--------------------------FRAMEWORKS PARA DAR ESTILO A TU PAGINA---------------------------------------
+-ej:
+Bootstrap
+Bulma
+Tailwind CSS
+
+-------------------------------Bulma
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+>
+
+Insertar esto en el html para usar, va en el header
+
+ 
+ --------------------------RECOMENDACINES
+ Al usar un framework lo recomenddable es poner todo el contenido
+ dentro de un container para mayor responsive

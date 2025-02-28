@@ -1,0 +1,22 @@
+meta {
+  name: modific user
+  type: http
+  seq: 5
+}
+
+put {
+  url: http://localhost:3000/api/v912/users/:id
+  body: json
+  auth: none
+}
+
+params:path {
+  id: 8
+}
+
+body:json {
+  {
+    "name": "lo",
+    "money": 0
+  }
+}

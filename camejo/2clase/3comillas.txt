@@ -1,0 +1,2 @@
+"" comillas dobles, se usa para expandir las variables 
+'' comillas simples, se usa para NO expandir las variables

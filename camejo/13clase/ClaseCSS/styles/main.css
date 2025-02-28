@@ -1,0 +1,15 @@
+  /* Base */
+  @import url('base/variables.css');
+  @import url('base/default.css');
+  @import url('base/typography.css');
+
+  /* Componentes */
+  @import url('components/card.css');
+  @import url('components/footer.css');
+  @import url('components/container.css');
+
+  /* Paginas */
+  @import url('pages/home.css');
+  @import url('pages/card-form.css');
+
+

@@ -1,0 +1,22 @@
+CSS sirve para ponerle estilos a las etiquetas
+
+Selectores:
+-Por tipo de elemento (p, h1, div)
+-Por ID (#mi-elemento)
+-Por clase (.mi-clase)
+
+propiedades:
+-color, font-size, background-color, margin, padding, etc 
+
+Valores:
+-colores (nombres, hexadecimales, RGB)
+-unidades de medida (px, em, rem)
+
+COMO INCROPORSR CSS A HTML
+-Estilo en linea: dentro de la etiqueta HTML (no recomendado)
+-Hoja de estilos interna: dentro de la seccion <head> del HTML (no recomendado)
+-hoja de estilos externe: en un archvio.css vinculado al HTML
+
+la ultima es la qu ehya que usar y se hace poniendo esto debajo
+de la etiqueta title
+<link rel="stylesheet" href="estilos.css">

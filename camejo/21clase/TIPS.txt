@@ -1,0 +1,11 @@
+1:02:20
+1:06:52 asegurar los datos del array al html
+1:41:30 delete
+2:10 no usar fetch pq consume mucho ( solo el caso de actualizar una tabla por lo visto no va )
+
+
+2:39:20 manjear el evento del ofrmulario (hay dos formas)
+los formularios ya teniendo un button disparan un evento (submit)
+
+feth: le pega a una API y nosotros podemos laburar con la respuesta, le 
+pegamos al localhost

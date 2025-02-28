@@ -1,0 +1,42 @@
+li {
+
+    color:firebrick 
+}
+
+.pato {
+
+    font-size: 80px;
+}
+
+body {
+
+    background-color:aqua;
+}
+
+.contenido {
+    
+    padding: 300px 300px 200px 200px; 
+    margin: 30px 300px; 
+    font-family: "Comic Sans MS", "Comic Sans", cursive; 
+}
+
+/* el pading son los 4 bordes y arranca de arriba y sigue en sentido horario*/
+/*
+Uso del important
+
+p {
+    color: blue; /* Regla normal 
+}
+
+p {
+    color: red !important; /* Esta regla tendrá prioridad 
+}
+*/
+
+table,
+th,
+td {
+    border: 5px solid black;
+}
+
+

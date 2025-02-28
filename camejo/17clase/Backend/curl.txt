@@ -1,0 +1,84 @@
+-------------------------CURL-----------------------------------
+curl es una herramienta de línea de comandos que se utiliza para 
+transferir datos desde o hacia un servidor
+
+-COMANDOS MAS COMUNES
+
+curl [URL]: Realiza una solicitud GET.
+curl -X POST [URL]: Realiza una solicitud POST.
+curl -I [URL]: Obtiene solo los encabezados HTTP.
+curl -O [URL]: Descarga un archivo.
+curl -d [data] -X POST [URL]: Envía datos con una solicitud POST.
+curl -H "Header: value" [URL]: Añade encabezados personalizados a la solicitud.
+
+
+
+
+1. Realizar solicitudes HTTP(S)
+curl https://api.example.com/data
+
+2. Enviar datos en una solicitud HTTP (POST, PUT, etc.)
+curl -X POST -d "name=John&age=30" https://api.example.com/users
+
+3. Obtener encabezados de respuesta
+curl -I https://api.example.com
+
+4. Descargar archivos
+curl -O https://example.com/file.zip
+
+
+5. Autenticación HTTP
+curl -u username:password https://api.example.com/protected
+
+6. Interacción con APIs
+curl -H "Authorization: Bearer YOUR_TOKEN" https://api.example.com/data
+
+7. Seguimiento de redirecciones
+curl -L https://example.com
+
+8. Verificación de certificados SSL
+curl --cacert /path/to/certificate.pem https://example.com
+
+-----------------------------------------------------------------------------------------------
+
+EL comando envia una solicitud HTTP POST al servidor en localhost:3000 en
+la ruta /api/v1/languages.
+Envia los datos {"id":1} como cuerpo (BODY) de la solicitud.
+
+
+curl localhost:3000/api/v1/languages -X POST -v --data '{"id":1}' -H 'content-type: application/html'
+
+Note: Unnecessary use of -X or --request, POST is already inferred.
+* Host localhost:3000 was resolved.
+* IPv6: ::1
+* IPv4: 127.0.0.1
+*   Trying [::1]:3000...
+* Connected to localhost (::1) port 3000
+> POST /api/v1/languages HTTP/1.1
+> Host: localhost:3000
+> User-Agent: curl/8.5.0
+> Accept: */*
+> content-type: application/json
+> Content-Length: 8
+> 
+< HTTP/1.1 200 OK
+< X-Powered-By: Express
+< Content-Type: text/html; charset=utf-8
+< Content-Length: 37
+< ETag: W/"25-zi9Rqv/k1V357Sc8OoR5IHMSemA"
+< Date: Wed, 20 Nov 2024 20:21:10 GMT
+< Connection: keep-alive
+< Keep-Alive: timeout=5
+< 
+* Connection #0 to host localhost left intact
+el cuerpo de tu request fue: {"id":1}
+
+1.Nota sobre -X: No necesitas usar -X POST, ya se infiere.
+2.Resolución de Host: localhost resuelto a ::1 (IPv6) y 127.0.0.1 (IPv4).
+3.Conexión al Servidor: Conexión establecida en el puerto 3000.
+4.Detalles de la Solicitud: Se envió una solicitud POST con JSON ({"id":1}).
+5.Respuesta del Servidor: HTTP 200 OK (respuesta exitosa).
+6.Cabeceras de la Respuesta: Usando Express, tipo text/html, tamaño 37 bytes.
+7.Confirmación de Datos: El cuerpo de la solicitud fue: {"id":1}.
+
+

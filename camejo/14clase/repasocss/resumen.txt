@@ -1,0 +1,83 @@
+repaso clase csss
+
+                    posicion fixed vs absolute
+
+fixed es relativo al navegador, ademas se queda fijo en pantalla
+absulute se mueve con respecto al padre, no se queda fijo en pantalla
+
+-----------------------------------------------------------------------------------------
+                            Diferencia entre:   
+
+                            align-content vs justify-content
+
+align-content labura en 2 dimensiones
+justify-content labura en 1 dimension
+
+*VER VIDEO clase 14 de dudas 
+hasta el minuro 30
+
+justify-content: Alinea elementos en el eje principal (horizontal)
+align-content: Alinea líneas de elementos en el eje cruzado (vertical)
+align-content: Alinea las líneas de elementos cuando hay espacio adicional en el eje cruzado.
+
+Propiedades de ambas:
+
+flex-start
+flex-end
+center
+space-between
+space-around
+space-evenl
+
+--------------------------------------------------------------------------------------------
+                       COMO FUNCIONA LA PROPIEDAD TRANSITION
+
+transition: sirve para hacer "animaciones"
+
+   transition <properity> <duration> <taiming-function> <deplay>
+   transición: <propiedad> <duración> <función de temporización> <retraso>;
+
+transición
+linear
+ease
+ease-in
+ease-out
+ease-in-out
+cubic-bezier(p1, p2, p3, p4)
+steps(n)
+
+Propiedades
+background-color
+color
+opacity
+transform
+height
+width
+margin
+padding
+border
+box-shadow
+left
+right
+top
+bottom
+
+--------------------------------------------------------------------------------------------
+
+             para QUE SIRVE LA PROPIEDAD NAME DEL INPUT
+
+ojo: la funcion del name en input se usa para que cuando hagamos
+la opcion multiple con circulito solo se pueda elegir una opcion
+
+DIFERENCIA ENTRE ID y NAME
+
+ID sirve para marcar un UNICO elemnto en especifico
+NAME sirve para delimitar un input al usuario
+
+------------------------------------------------------------------------------------------------
+ 
+            CUAL ES LA DIFERENCIA ENTRE SECTION Y DIV
+
+la diferencia es semantinca, uno fue creado para una cosa y el otro para otra
+DIV es generico se usa cuando un oqueire
+SECTION tiene que ver con como esta hecho un documento, se lo divide por secciones

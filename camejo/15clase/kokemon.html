@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <title>Kokemon</title>
+    </head>
+    <body>
+
+        <h1>Este kokemon se llama: <span id="nombre_koke"></span> </h1>
+        <h2>Peso: <span id="peso_koke"></span></h2>
+        <h2>Altura: <span id="altura_koke"></span></h2>
+        <img id="imagen_koke" width="500">
+        <script>
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const nombre = urlParams.get('nombre');
+
+            fetch("https://pokeapi.co/api/v2/pokemon/" + nombre) 
+                .then(response => response.json())
+                .then(data => {
+
+                    let elemento = document.getElementById("nombre_koke")
+                    elemento.innerText = data.name
+
+                    let peso = document.getElementById("peso_koke")
+                    peso.innerText = data.weight
+
+                    let altura = document.getElementById("altura_koke")
+                    altura.innerText = data.height
+
+                    let imagen = document.getElementById("imagen_koke")
+                    imagen.src = data.sprites.front_default // OJO: sprites se saca del JSON
+
+                })
+
+
+        </script>
+        
+    </body>
+</html>

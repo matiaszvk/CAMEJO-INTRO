@@ -1,0 +1,178 @@
+create table personas (
+
+    id serial primary key,
+    nombre varchar(100) not null,
+    fecha_nacimiento date not null,
+    hincha_de references equipos (id)
+)
+
+"REFERENCES equipos(id)" sirve para crear una CLAVE FORANEA: establece una relacion entre la tabla
+personas y la de equipos
+
+
+create table equipos (
+    id serial primary key,
+    nombre varchar(100) not null
+)
+
+create table partidos (
+    id serial primary key,
+    local references equipos(id) not null,
+    visita references equipos(id) not null,
+    fecha_partido date not null,
+    goles_local int default 0,
+    goles_visita int default 0,
+    torneo references torneos(id)
+)
+
+create table torneos (
+    id serial primary key,
+    nombre varchar(100) not null,
+    inicio date not null,
+    fin date not null,
+    ganador references equipos(id)
+)
+
+IMPORTA EL ORDEN DE CREACION
+1 equipos
+2 personas
+3 torneos
+4 partidos
+PRIMERO HAY QUE CREAR A LOS HIJOS Y LUEGO A LOS PADRES
+
+PAGINA PARA GENERAR DATA 
+https://www.mockaroo.com/
+
+-------------------------------------------------------------------------------------------------------------------
+CONSULTAS Y SUBQUERY
+
+
+--Muestra todas las personas con su equipo asociado (solo aquellos que tienen un equipo asignado)
+SELECT * 
+FROM personas p
+INNER JOIN equipos e ON p.hincha_de = e.id;
+
+--Muestra todas las personas, incluyendo aquellas que no tienen un equipo asignado (puede mostrar NULL en el equipo)
+SELECT * 
+FROM personas p
+LEFT JOIN equipos e ON p.hincha_de = e.id;
+
+--Muestra todos los equipos, incluyendo aquellos que no tienen personas asociadas (puede mostrar NULL en la persona)
+SELECT * 
+FROM personas p
+RIGHT JOIN equipos e ON p.hincha_de = e.id;
+
+--Atajo para INNER JOIN: Muestra todas las personas con su equipo asociado (solo aquellos que tienen un equipo asignado)
+SELECT * 
+FROM personas p, equipos e 
+WHERE p.hincha_de = e.id;
+
+-- Consulta 1: Devuelve todos los partidos del torneo con ID 4, mostrando los datos de las tablas 'torneos' y 'partidos' donde las condiciones se cumplan
+SELECT * 
+FROM torneos t, partidos p 
+WHERE t.id = 4  -- Filtra el torneo con ID 4
+AND p.torneo = t.id;  -- Asegura que solo se muestren los partidos que pertenecen a ese torneo
+
+-----------------------------------------SUBQUERY---------------------------------------------------------------------------------------------
+
+QUERY DENTRO DE OTRA QUERY, equipo_local y equipo_visita son alias 
+
+-- Consulta 2: Devuelve los nombres de los equipos locales y visitantes en los partidos del torneo con ID 4
+SELECT (SELECT nombre FROM equipos WHERE id = p.local) equipo_visita, equipo_local  -- Subconsulta para obtener el nombre del equipo local
+FROM partidos p 
+WHERE p.torneo = 4;  -- Filtra los partidos del torneo con ID 4
+
+------------------------------PALABRAS RESERVADAS------------------------------------------------------
+Existen palabras RESERVADAS, para usarlas como columnas hay que ponerle ""
+
+-------------------------------------------------------count(*)------------------------------------------
+SELECT COUNT(*) FROM empleados;
+COUNT(*) cuenta el número total de filas en una tabla, independientemente de que las columnas contengan valores NULL o no
+
+--Cuenta el número de registros en la tabla partidos donde la columna "local" es igual a la columna visita
+SELECT count(*)
+from partidos p
+where "local" = visita
+
+--elimna de la tabla partidos los partidos en donde jueguen river contra river por ej
+
+delete from partidos palabras
+where "local" = visita 
+
+SELECT count(*)
+from partidos p
+where goles_visita > goles_local
+
+SELECT count(*)
+from partidos p
+where goles_visita < goles_local
+
+SELECT count(*)
+from partidos p
+where goles_visita = goles_local
+
+-----------------------------------------------SUMAR----------------------------------------------------
+
+-- Te da los goles del local, del visitante y de los dos sumados (gl, gv y gt son alias)
+SELECT sum(goles_local)  + sum(goles_visita)  gt, sum(goles_local) gl,  sum(goles_visita) gv
+from partidos p
+where p.torneo = 9
+
+----------------------------------------------GROUP---------------------------------------------
+-- Agrupa los partidos por torneo y suma los goles de los equipos visitantes por cada torneo.
+SELECT sum(goles_visita) gv, torneo
+from partidos p
+group by torneo
+group by torneo
+
+------------------------------------------HAVING--------------------------------
+
+HAVING en SQL es una cláusula que se utiliza para filtrar los resultados después de haber realizado una agregación
+ (como SUM(), COUNT(), AVG(), etc.). A diferencia de WHERE, que filtra las filas antes de cualquier agregación, 
+ HAVING se aplica después de que los datos han sido agrupados y calculados.
+
+--La consulta busca todos los partidos, agrupa los resultados por torneo, calcula la suma de los goles
+de los equipos visitantes en cada torneo, y luego muestra solo aquellos torneos cuya suma de goles 
+visitantes es menor que 150.
+
+SELECT sum(goles_visita) gv, t, nombre
+from partidos p, torneos t 
+where p.torneo = t.id 
+group by t.nombre 
+having sum(goles_visita) < 150
+
+
+-------------------------------------------BETWEEN---------------------------------------------------------------
+"entre" sirve para poner entre dos condiciones, ejemplo entre 56 y 1200, toma el inclusive
+--------------------------------------------EJERCICIOS------------------------------------------------------------------
+1) cuantoas peronas que nacieron antes de una fecha no son hinchas de nada, y antes del 2005
+
+--da todas las personas que no son hinchas de nada
+select *
+from personas p
+where hincha_de is null
+and fecha_nacimiento < "2005-01-01"
+
+--da la cantidad de personas que no tienen club
+select count(*)
+from personas p
+where hincha_de is null
+
+
+2) cuantos hinchas de racing nacieron despues del 2000 y el 2010
+
+from personas p
+where hincha_de = (select id from equipos e where nombre = "racing club")
+and fecha_nacimiento between '2000-01-01' and '2010-12-31'
+
+
+
+
+3) torneos que tienen fechas de incio y fin, inconsitencias d epartido de un torneo con fecha   
+fuera de ese incio y fin
+
+select *
+from partidos p, torneos t 
+where p.torneo = t.id 
+and not p.fecha between t.inicio and t.fin 
+and t.id = 1

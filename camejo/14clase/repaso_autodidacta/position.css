@@ -1,0 +1,49 @@
+/*     FIXED 
+
+    .cuadrado {
+
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+    position: fixed;
+    propiedades top left bottom right
+} */
+
+.cuadradorelative {
+
+    width: 200px;
+    height: 200px;
+    background-color:navy;
+    position: relative;
+    top: 200px;
+}
+
+.cuadradofixed {
+
+    width: 200px;
+    height: 200px;
+    background-color:aqua;
+    position: fixed;
+    top: 300px;
+    right: 200px;
+}
+
+/* debe ser hijo de alguien el absolute */
+.circuloabsolute {
+
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color:brown;
+    position: absolute;
+    left: 10px;
+    top: 0;
+    
+}
+
+body {
+
+    padding: 1000px;
+    justify-content: center;
+
+}

@@ -1,0 +1,7 @@
+services:
+  api:
+    build: ./api
+    ports:
+    - 9000:3000
+    volumes:
+      - ./archivos:/app/archivos

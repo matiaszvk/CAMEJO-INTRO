@@ -1,0 +1,39 @@
+1)---------------------inciar un proyecto en js------------------------
+
+npm init 
+
+o
+
+npm init -y
+"para incializarlo por defecto"
+
+"agrega package.json"
+
+2)---------------------------express.js-------------------------------------
+
+Para facilitar el arme de un servidor http vamos a usar un framework
+
+Express.js: ramework de Node.js utilizado para crear aplicaciones web 
+y APIs de manera rápida y eficiente
+
+instalamos con:
+
+npm install express
+
+"agrega package-lock.json" y "node_modules"
+
+
+3)------------------------index.js---------------------------------------
+
+crear ese archivo especifico aunque se puede cambiar, modificando el:
+
+  "main": "index.js",
+
+ver: https://expressjs.com/
+
+4)
+-instalar nodemon
+npm install nodemon
+-ejecutar
+npx nodemon index.js
+

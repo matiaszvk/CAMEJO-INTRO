@@ -1,0 +1,11 @@
+#!/bin/bash
+
+export i=0
+
+while [ $i -lt 99 ]
+do
+	echo"i es: $i"
+	export i=$(($i + 1))
+done
+
+

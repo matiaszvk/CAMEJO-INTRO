@@ -1,0 +1,20 @@
+Laura Uffal,Análisis Matemático,25
+Juan Pérez,Programación,100
+María Gómez,Ciencias de la Computación,00
+Pedro López,Álgebra,78
+Ana Ruiz,Matemáticas Avanzadas,08
+Carlos Fernández,Física,88
+Sofía Martínez,Química,76
+Diego Torres,Historia,95
+Lucía Rodríguez,Geografía,80
+Javier Sánchez,Estadística,70
+Paola Morales,Teoría de Conjuntos,62
+Nicolás Pérez,Matemáticas Discretas,85
+Valentina Castro,Programación Web,90
+Emilia García,Introducción a la Ingeniería,82
+Gabriel Díaz,Economía,87
+Clara Jiménez,Redes de Computadoras,93
+Felipe Salazar,Ética Profesional,91
+Martín Herrera,Matemáticas Financieras,64
+Isabella Mendoza,Algoritmos,89
+Rodrigo Castillo,Desarrollo de Software,10

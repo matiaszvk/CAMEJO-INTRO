@@ -1,0 +1,23 @@
+VOLUMEN: tiene dos funciones principales
+
+1.Persistencia de datos: Los volúmenes permiten que los datos generados y 
+utilizados por un contenedor persistan incluso si el contenedor se 
+detiene o se elimina.Esto es útil para mantener la información 
+entre diferentes ejecuciones del contenedor.
+
+2.Comparticion de datos: los volumenes pueden ser usados
+para compartir datos entre contenedores y tabmien pueden 
+ser montados en directorios especificos del sistema de archivos 
+de la maquina host para facilitar intercambio de datos y archivos
+entre el host y los contenedores
+
+Un volumen en Docker es un mecanismo de almacenamiento que 
+permite guardar datos generados y utilizados por contenedores. 
+
+IDEA: "QUE LA COMPU Y EL CONTEINER COMPARTAN UNA CARPETA"
+
+EJ: 
+    volumes:
+      - ./archivos:/app/archivos
+
+Esto hace que el conteiner y mi compu compartan la misma carpeta

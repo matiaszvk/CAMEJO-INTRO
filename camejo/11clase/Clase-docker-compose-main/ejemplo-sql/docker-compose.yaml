@@ -1,0 +1,12 @@
+#https://hub.docker.com/_/postgres
+services:
+  db:
+    image: postgres:17-alpine3.20
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    ports:
+      - 5432:5432
+    volumes:
+      - ./bdd:/var/lib/postgresql/data
+    restart: always

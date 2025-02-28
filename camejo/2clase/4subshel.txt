@@ -1,0 +1,6 @@
+ejecutar un comando dentro de otro comando o tambien ...
+... las subshels sirven para concatenar strigns 
+para ellos se usa $(COMANDO)
+
+para asignar un comando a una variable hago lo siquiente:
+export NOMBRE="$(COMANDO)" entre comillas

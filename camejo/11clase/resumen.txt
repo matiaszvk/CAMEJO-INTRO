@@ -1,0 +1,69 @@
+VOLUMEN
+Espacio de alamcenamiento para datos que puede ser utilizado por contenedores
+
+DOCKER COMPOSE
+Con Docker Compose, puedes describir la configuración de varios 
+contenedores en un solo archivo YAML, lo que simplifica la gestión
+y el despliegue de aplicaciones que requieren múltiples servicios
+
+COMANDOS BASICOS
+
+docker run
+
+docker pull
+
+docker images
+
+docker ps
+docker ps -a
+
+docker start
+
+docker stop
+
+docker exec -it
+"atamos una terminal"
+
+docker run -it ubuntu
+
+-----para todos-----
+docker stop $(docker ps -a -q)
+
+-----elimina todos-----
+docker rm $(docker ps -a -q)
+
+
+----------------------------------------------------------------------------
+                 DOCKER FILE
+sirve para definir como se construye una imagen por medio de un archivo docker file
+dokcer build para armarla
+docker run para correrla
+
+FROM programa:version
+ej
+FROM node:1.45
+ej
+FROM node (como no se especifica nada te da la ultima version)
+
+WORKDIR /app
+sirve para decir en que directorio vamos a laburar con esa imagen
+
+COPY (que quiero copiar (a donde lo quiero copiar)
+ej 
+COPY package.json .
+metemos lo archvios adenotro de nuestro conteiner
+
+RUN 
+ej
+RUN npm install (esto hace instalar dependencias de node)
+ejecuta un comando de real durante la construccion de la imagen
+
+COPY
+ej 
+COPY . /app
+otro copy, este trae todo el directorio adentro de nuetro conteiner
+
+FROM WORDIR COPY RUN COPY 
+todo esto se ejecuta con docker build
+
+CMD esto se ejecuta con docker run 

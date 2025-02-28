@@ -1,0 +1,14 @@
+.home {
+  min-height: 100vh;
+  padding: 0vw 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home h1 {
+  text-align: start;
+  font-size: 4rem;
+  color: var(--color-bg-light);
+}
+

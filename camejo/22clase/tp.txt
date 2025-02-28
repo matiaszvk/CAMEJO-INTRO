@@ -1,0 +1,120 @@
+2:08:30
+-comienza a hablar del tp
+
+----------------------------------------------------------------------------------------------
+
+Requisitos
+
+1) BACKEND debra ser una API REST 
+2) FRONEND estatico, 3 paginas diferentes minimo
+3) minimo 3 entidades diferentes, con minimo 5 campos cada una (no incluye ID)
+-OJO: una tabla no es una entidad, en el proyecto anterior 
+unlockCharacters NO cuenta como entidad
+4) minimo una relacion con foreign keys, o por ahi 2 por tener 3 entidades (me quedaria con 2)
+5) CRUD completo para cada entidades
+-crear, actualizar, borrar, leer un elemento, listar todos lo elementos
+-no solo deben estar esoso endpoints, si no que el usuario debe poder 
+interactual con ellos mediante le frontend
+6)levantar el proyecto usando Docker Compose, permitiendo levantar
+el BACKEND y FRONEND por separado
+-usar CSR 
+7) README, usar readme.md con ese formato
+-explica que es el programa, que hace, como configurarlo inicialmente, como levanar el sistema
+8)GIT
+-git privado
+-desarrolo incremental con commits atomicos, con mensajes descriptivos
+-branches para desarrollar nuevas funcionalidades
+y pull requests para la revision de codigo
+-los pull requests deberan ser revisados y aprobados por al menos un compañero de grupo, para
+evitar pushes accidentales a main
+
+--------------------------------------------------------------------------------------------------------------
+ENTIDADES:
+3 entidades diferentes (minimo), con un CRUD completo cada una
+
+------------------------CRIMINALES (criminals)------------------------------
+CAMPOS:
+*nombre completo
+*alias o apodo 
+*delito
+*edad 
+*sexo
+*tratamiento actual(meidcacion, terapia,etc)
+*nivel de peligrosidad
+*foto
+
+Operaciones CRUD:
+Crear: Crear un nuevo villano con nombre, alias, delito, nivel de peligrosidad y tratamiento.
+Leer: Ver los detalles de un villano específico.
+Actualizar: Modificar la información de un villano (nombre, alias, tratamiento, etc.).
+Eliminar: Eliminar un villano de la base de datos.
+Listar: Listar todos los villanos registrados.
+
+
+
+-------------------------------------DELITOS (crimes)------------------------------------
+
+CAMPOS:
+*nombre delito (asalto, homicidio, robo, etc)
+*descripcion (descripcion del detallada del delito)
+*fecha cometido
+*sentencia (sentencia judicial)
+*criminal_id (clave foranea a criminal)
+
+Operaciones CRUD:
+Crear: Crear un nuevo delito asociado a un villano.
+Leer: Ver los detalles de un delito específico cometido por un villano.
+Actualizar: Modificar la descripción o sentencia de un delito.
+Eliminar: Eliminar un delito de la base de datos (si el villano es indultado o en otro caso).
+Listar: Listar todos los delitos cometidos por los villanos.
+
+--------------------------------------CELDAS (JAILS)-------------------------------------
+
+
+PRISION (jails)
+
+CAMPOS:
+*numero
+*tipo (aislamiento, comun, de alta segurad)
+*estadp(ocupado, libre, en reparacion)
+*criminal_id (clave foranea a criminal)
+*capacidad_max
+
+Operaciones CRUD:
+Crear: Asignar una nueva celda con el número, tipo, capacidad máxima y estado.
+Leer: Ver los detalles de una celda específica, incluyendo el villano asignado (si tiene).
+Actualizar: Modificar los detalles de una celda (estado, villano asignado, etc.).
+Eliminar: Eliminar una celda (si está vacía o ya no se usa).
+Listar: Listar todas las celdas disponibles, mostrando su estado y villano asignado.
+
+
+---------------------------------PERSONAL (STAFF)--------------------------------------
+
+CAMPOS:
+*nombre
+*rol (psiquiatra, guardia, trabajador social)
+*criminal_asignado_id (clave foranea a crimales)
+*turno
+*contacto (correo, telefono)
+
+Operaciones CRUD:
+Crear: Crear un nuevo personal con su nombre, rol, turno y contacto, asignándole un villano.
+Leer: Ver los detalles de un miembro del personal y el villano asignado.
+Actualizar: Modificar la información de un miembro del personal (asignación de villano, turno, etc.).
+Eliminar: Eliminar a un miembro del personal (si ya no trabaja allí o fue reasignado).
+Listar: Listar todos los miembros del personal y sus asignaciones.
+
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+6 vistas
+home.html
+criminals.html
+crimes.html
+staff.html
+jail_primer_piso.html
+jail_segundo_piso.html
+
+
+

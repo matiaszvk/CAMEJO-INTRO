@@ -1,0 +1,62 @@
+Variables (Propiedades personalizadas)
+
+psedoclases: orma de seleccionar elementos HTML basándose en su estado o posición en 
+el documento, sin necesidad de añadir clases o atributos extra en el HTML
+
+ejemplo
+
+:root {
+    --color-primary: #ABCD12; 
+}
+
+El selector :root en CSS se refiere al elemento raíz del documento, 
+que en HTML es el elemento <html>. Se usa para definir variables
+
+--------------------------------------------------------------------------------
+
+Para que css reconozca las variables hay que definir FUNCIONES
+
+FUNCIONES
+var()
+calc()
+rgb(), rgba()
+min(), max(), minmax()
+linear-gradient()
+url()
+
+var(): Accede a las variables CSS definidas
+calc(): Realiza cálculos con valores CSS (suma, resta, multiplicación, división)
+rgb() y rgba(): Define colores en formato RGB y RGBA (el último valor es la opacidad)
+min() y max(): Establece valores mínimos y máximos.
+linear-gradient(): Crea un degradado lineal entre dos o más colores.
+url(): le avisa a css que se labura con links
+
+-----------------------------------------------------------------------------------
+
+RESPONSIVENESS
+Capacidad de un diseño web para adaptarse a diferentes 
+tamaños de pantalla y dispositivos
+----------------------------------------------------------------------------------
+
+PROPIEDADES IMPORTANTES DE CSS
+
+                              POSITION
+-static
+-relative
+-absolute
+-fixed
+-sticky
+VARIANTES DE posición
+-top
+-bottom
+-left
+-right
+-hight
+-widht
+
+                               DISPLAY
+-inline
+-block
+-inline-block
+-gradient
+-flex

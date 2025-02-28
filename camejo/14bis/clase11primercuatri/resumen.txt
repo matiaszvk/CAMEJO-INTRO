@@ -1,0 +1,22 @@
+           JS
+recomendable poner el script js al final del body, antes
+podria relentizar la pagina
+
+
+-------------------OBTENER ELEMENOTS DE HTML (DEL DOM)-----------------------------
+
+se hace con un ID y se los llamda con el nombre
+
+ej 
+
+id="contador"
+
+
+ej POR CONSOLA:
+
+contador.getAttribute("class")
+contador.innerText
+
+--------------------MODIFICAR ELEMENTOS DE LA PAGINA---------------------
+
+contador.innerText = "atencio nse viene rriver s evine"

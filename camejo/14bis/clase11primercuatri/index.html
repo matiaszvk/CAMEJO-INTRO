@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase js</title>
+</head>
+<body>
+    <h1>clase de JS</h1>
+
+    <button onclick="restar()">restar</button>
+    <span id="contador">0</span>
+    <button onclick="reiniciar()">reiniciar</button>
+    <button onclick="sumar()">sumar</button>
+
+    <div>
+        <input type="number" id="inputContador">
+        <button onclick="cambiar()"> ENTER</button>
+
+    </div>
+    <script>
+        let i = 0;
+
+        function imprimir() { 
+
+            console.log(i)
+        }
+
+        function restar(){
+            i--;
+            contador.innerText = i;
+
+        }
+
+        function sumar(){
+            i++;
+            contador.innerText = i;
+        }
+
+        function reiniciar(){
+            i = 0;
+            contador.innerText = i;
+        }
+
+        function cambiar(){
+
+            // recomendable parsearlo
+
+            i = parseInt(inputContador.value) 
+            contador.innerText = i
+        }
+    </script>
+    <!-- <script src="./calculadora.js"></script> -->
+</body>
+</html>

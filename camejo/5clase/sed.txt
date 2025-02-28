@@ -1,0 +1,44 @@
+sed
+
+set se usa para otras cosas variadas
+grep es excluisivamente para buscas
+
+comando de iunix
+
+sed [script] [archivo]
+
+con el sed buscamos y reemplazamos
+
+sed  opciones 's/patron/reemplazo/g' [archivo]
+
+s=sustituir
+
+ejemplo
+
+modificadores:
+
+-i modifica el archivo  /////////// otra alternativo es >>
+-e concatena operaciones
+-r usa expresiones regulares extenididas
+Nd elimina la N-enima linea
+/patron/d elimina las lineas que matchean
+/patron/p imprime las lineas que coinciden 
+s/patron/reemplazo/g aplica la sustitucion en todas las coincidencias 
+s/patron/reemplazo/I ignora el case 
+$ agrega un salto de linea despues de un rango o palabra a buscar
+
+buscar 
+sed r 's[aeiou]/a/g' ejemplo.txt
+sed r 's(a/e/i/o/u)/a/g' ejemplo.txt
+sed r 's[aeiou]/a/Ig' ejemplo.txt
+
+transformar (nota < 55) en un 55
+sed -r 's/(5[0-4])|([0-4][0-9])/55/g' notas.txt 
+hay que poner -r para escapar el | si no no lo toma
+
+
+sed -r 's/(,5[0-4\r])|(,[0-4][0-9]\r)/,55/g' notas.txt
+
+ej 3 intercambiar notas de gonza con las de nico en un solo comando
+
+

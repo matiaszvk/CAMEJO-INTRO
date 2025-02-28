@@ -1,0 +1,36 @@
+git status: muestra el estado actual del repo
+git diff: muestra que cambio se realizo en los archivos
+git stash: dado cambios me permite guardarlos en una cola de cambios  
+y deshacer los cambiios (limpia todo y los cambios quedan guardados
+en una repisa).
+git stash por: volver a los cambios de esa lista 
+git stash list: lista los cambios que se hicieron agrupado por commit
+git log: ver las cosas que pasaron en el pasado
+
+git add: dado un archivo que esta en antrack o en anstage, al hacer
+git add los paso al repo
+git commit: confrimo losa archivos
+git checkout: morverse en ramas, borra todos los cambios
+git branch: laburar con ramas
+
+git pull: bajar los cabmios del repo de otro individuo
+git push: subir los cambios comiteados
+git revert: deshacer cambios que ya estan confirmados (sirve 
+para cambios pusheados)
+git reset: lo mismo pero para cosas que no pushee (solo para cosas del repo
+local)
+
+.gitignore : creamos este archivos y metemos linea por linea tood slos arhivos
+o toods lo directorios o hacemos una regex para poner todo lo 
+que queremos que git no toque
+
+happy path
+git pull
+git add 
+git commit 
+git push
+
+buenas practicas
+siempr crear una rama para laburar
+realizar commitd por funionalidad
+

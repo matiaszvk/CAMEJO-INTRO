@@ -1,0 +1,86 @@
+### 1. Criminales (Criminals)
+
+Campos:
+- nombre completo
+- alias o apodo
+- delito
+- edad
+- sexo
+- tratamiento actual (medicación, terapia, etc.)
+- nivel de peligrosidad
+- foto del criminal
+
+Operaciones CRUD:
+- Crear: Crear un nuevo villano con nombre, alias, delito, nivel de peligrosidad y tratamiento.
+- Leer: Ver los detalles de un villano específico.
+- Actualizar: Modificar la información de un villano (nombre, alias, tratamiento, etc.).
+- Eliminar: Eliminar un villano de la base de datos.
+- Listar: Listar todos los villanos registrados.
+
+---
+
+### 2. Delitos (Crimes)
+
+Campos:
+- nombre delito (asalto, homicidio, robo, etc.)
+- descripción (descripción detallada del delito)
+- fecha cometido
+- sentencia (sentencia judicial)
+- criminal_id (clave foránea a criminal)
+
+Operaciones CRUD:
+- Crear: Crear un nuevo delito asociado a un villano.
+- Leer: Ver los detalles de un delito específico cometido por un villano.
+- Actualizar: Modificar la descripción o sentencia de un delito.
+- Eliminar: Eliminar un delito de la base de datos (si el villano es indultado o en otro caso).
+- Listar: Listar todos los delitos cometidos por los villanos.
+
+---
+
+### 3. Celdas (Jails)
+
+Campos:
+- número
+- piso (primer o segundo piso) – Este campo indica en qué piso se encuentra la celda.
+- tipo (aislamiento, común, de alta seguridad)
+- estado (ocupado, libre, en reparación)
+- criminal_id (clave foránea a criminal)
+- capacidad_max
+
+Operaciones CRUD:
+- Crear: Asignar una nueva celda con el número, piso, tipo, capacidad máxima y estado.
+- Leer: Ver los detalles de una celda específica, incluyendo el villano asignado (si tiene).
+- Actualizar: Modificar los detalles de una celda (estado, villano asignado, etc.).
+- Eliminar: Eliminar una celda (si está vacía o ya no se usa).
+- Listar: Listar todas las celdas disponibles, mostrando su estado y villano asignado.
+
+---
+
+### 4. Personal (Staff)
+
+Campos:
+- nombre
+- rol (psiquiatra, guardia, trabajador social)
+- criminal_asignado_id (clave foránea a Criminals)
+- turno
+- contacto (correo, teléfono)
+
+Operaciones CRUD:
+- Crear: Crear un nuevo personal con su nombre, rol, turno y contacto, asignándole un villano.
+- Leer: Ver los detalles de un miembro del personal y el villano asignado.
+- Actualizar: Modificar la información de un miembro del personal (asignación de villano, turno, etc.).
+- Eliminar: Eliminar a un miembro del personal (si ya no trabaja allí o fue reasignado).
+- Listar: Listar todos los miembros del personal y sus asignaciones.
+
+---
+
+### Relaciones entre las entidades con claves foráneas:
+
+- **Delitos - Criminales**: Un delito está asociado a un criminal (relación 1 a muchos).
+  - Clave foránea: criminal_id en la tabla Delitos.
+  
+- **Celdas - Criminales**: Un criminal está asignado a una celda (relación 1 a 1).
+  - Clave foránea: criminal_id en la tabla Celdas.
+  
+- **Personal - Criminales**: Un miembro del personal puede estar asignado a varios criminales (relación 1 a muchos).
+  - Clave foránea: criminal_asignado_id en la tabla Personal.

@@ -1,0 +1,32 @@
+--------------------------JS-------------------------
+
+COMO SE ESCRIBE UNA VARIABLE DENTRO DE TEXTO?
+
+`${}`
+
+
+------------------------LET------------------------
+
+si no ponemos let es como si no estuvieramos actualizando
+la variable lo cual traeria problemas
+
+
+---------------FRAMEWORKS de CSS----------------------
+bulma
+Bootstrap
+Foundation
+
+-----------------Bootstrap Recomendaciones-------------------------
+dos opciones
+
+1. Usar Bootstrap a través de un CDN (Content Delivery Network)
+forma más rápida y sencilla de integrar Bootstrap, ya que no necesitas 
+descargar ni alojar los archivos de Bootstrap en tu servidor. 
+Solo tienes que vincular el archivo CSS y JS de Bootstrap que se encuentran 
+en una red de distribución de contenido (CDN).
+
+2. Descargar Bootstrap e Integrarlo Localmente
+
+Si prefieres tener más control sobre los archivos de Bootstrap o si deseas 
+trabajar sin conexión a internet, puedes descargar Bootstrap y luego incluirlo 
+en tu proyecto localmente.

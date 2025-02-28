@@ -1,0 +1,96 @@
+JAVASCRIPT es un lenguaje que se comunica con el navegador
+
+NODE
+Node.js es un entorno de ejecución de JavaScript que se utiliza fuera del navegador, específicamente 
+para ejecutar código JavaScript en el lado del servidor
+
+3 formas para declarar variables
+
+let recoemdable, un scope limitado
+var no reco, un scope muy grande
+const 
+
+TIPADO: dinamica, debil y inferido
+
+operdores: la mayoria son como en c 
+
+=== igualdad estricta, si se comapara un 1 con "1" devuelve false
+!== comparacion estricta, el analogo de ===
+
+
+-----VECTORES------
+
+[1, 2, 2]
+
+[0] se accede al primer elemento
+
+vector.length te da el largo
+
+vector[vector.length-1] te dice el ultimo elemento del vector / LISTA
+
+vector.slice(2, 5) el primero lo incluye y el seugndo no
+
+vector.push('w') agrega un nuevo elemento y devuelve el nuevo tamaño del vector
+
+vector.pop() saca el ultimo elemento 
+
+-----------------VER DOCUMENTACION EN MDN----------------------------
+
+"no podemos comparar vector con vector"
+"debemos hacerlo elemento a elemento con un for"
+
+---------------------  ``      ------------------------------
+
+`` estas comillas especiales son para hacer un strign con variables adentro
+
+ 
+
+---------------------FUNCIONES ANONIMAS------------------------------
+se pueden guardar funciones en variables
+
+let variable = funcion
+      o
+const variable = funcion
+
+-------------FUNCION ANONIMA---------------------------------
+
+( ) => {
+
+}
+
+ej:
+
+const operacion = (a,b) => {
+    return a + b
+}
+
+---------------------TRES COSAS QUE HACEN LO MISMO-------------------------
+
+(a,b) => a + b
+
+(a, b) => {
+    return a + b
+}
+
+function suma(a+b) {
+    return a + b
+}
+
+---------------------------OBJETOS-----------------------------------------
+
+ej 
+
+const powerRanger = {
+    nombre: "Red Ranger",  // Nombre del Power Ranger
+    color: "Rojo",         // Color del traje
+    habilidades: [         // Vector (arreglo) de habilidades
+        "Fuerza mejorada", 
+        "Velocidad sobrehumana", 
+        "Habilidad de combate", 
+        "Llamar Zord"
+    ]
+};
+
+powerRanger.color para acceder 
+
+

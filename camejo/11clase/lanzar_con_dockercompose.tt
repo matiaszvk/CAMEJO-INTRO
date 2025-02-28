@@ -1,0 +1,23 @@
+se puede definir con
+
+docker-compose.yaml
+o
+docker-compose.yml
+
+"sirve para correr una imagen"
+"tambien sirve para orquestar distintas imagenes"
+se lanza:
+
+docker compose build
+"para construir"
+
+docker compose up
+"para correrlo"
+
+docker compose down 
+1.Detener todos los contenedores definidos en el archivo docker-compose.yml.
+2.Eliminar esos contenedores.
+3.Eliminar las redes creadas para la aplicación
+
+docker compose down --volumes
+"elimina los volumenes"

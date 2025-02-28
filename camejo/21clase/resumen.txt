@@ -1,0 +1,55 @@
+50:00
+-para consumir laog del localhost desde el localhost
+npm install cors
+
+1:02:40 
+creando un user a travez del backend con CURL, osea con el endpoint
+
+curl --header "Content-Type: application/json" \
+     --request POST \
+     --data '{"name": "leonardo", "money": "66"}' \
+     http://localhost:3000/api/v1/users
+
+
+1:06:40 
+añadir datos dinámicamente al HTML a partir de una solicitud GET que haces a tu backend
+-consumo la api, en la base de datos se agrego algo y cuadno vuelvo 
+a consumir me da los datos de nuevo
+-basicamente se creo dos solicitudes que impactan en el html usando la base de datos, se
+hizo con users y characters
+
+1:41:30 
+se implementa un boton de eliminacion (placebo)
+
+1:48:30
+se implementa el boton con interaccion onclik y se
+crea la funcion showCharacters para ver los personajes usando fetch (el
+cual usa el metodo predeterminado get para mostrar los personajes)
+
+1:59:00
+fetch al back para eliminar, para ello camnio el metodo a deletele y la
+ruta que ahora seria '/:id'
+
+2:07:40
+-le pongo un id a las filas, como el borrar me devuelve el elemento
+borrado entonces lo puedo buscar con un getelemenetbyid (buscar) y borrarlo
+-no hacemos el showcharacter pq usa un fetch y eso consume mucho
+-OJO, al hacer esto de pedir directamnete el elemento perdemos el index #, se
+podria arreglarlo con un css pero es mas complicado
+
+2:12:50 se implemnta un insert con un formulario
+-para ello creo un formulario en una nueva vista
+
+2:21:15 se crea un formulario con dos opciones de guardar y limpiar, este linkea
+a dos funciones js, una que limpia el fomrulario y otra que nos guarda en variables
+la data que tenemos que meter en el body que tenemos que mandar un post 
+
+---2:26:24 foto de characters.js
+
+2:25:20 se implementa a la larga un fetch al backend pero con el metodo POST
+
+
+2:39:20 manjear el evento del ofrmulario (hay dos formas)
+los formularios ya teniendo un button disparan un evento (submit)
+
+----solo faltaria el back que ya vimos con prisma en integracion 1

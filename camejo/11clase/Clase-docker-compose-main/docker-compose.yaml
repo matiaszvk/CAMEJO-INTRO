@@ -1,0 +1,9 @@
+services:
+  api:
+    build: ./api-basica
+    ports:
+    - 9000:3000
+  front:
+    build: ./front-basico
+    ports:
+    - 7777:80

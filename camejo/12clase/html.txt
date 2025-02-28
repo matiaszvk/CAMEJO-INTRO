@@ -1,0 +1,36 @@
+Lenguaje de Marcado
+
+Tags basicos
+
+<ps> parrado
+<a> link
+<img> imagen
+<h1> titulo
+<h2> titulo mas chico
+<h3> titulo mas mas chico
+<ul> lista no ordenada
+<ol> lista ordenada
+<li> elemtno de lista
+<strong> o <b> texto en negrita
+<em> o <i> texto en cursiva
+<u> texto subrayado
+<br> salto de linea
+<hr> linea horizontal
+<div> define una division o seccion en el documento
+<span> define un fragmento inline; para aplicar estilos a partes especificas del texto
+<table> crea una tabla
+<tr> define una fila en una tabla
+<td> define una celda en una tabla
+
+Atributos de los Tags
+
+href link a la que referencia nuestro tag <a>
+id identiicador de nuestro tag, debe ser unico
+style estilos que le agregamos a nuestro tag
+src path donde se encuentra la imagen del tag <img>
+
+Dos tipos de IDENTIFICADORES: id y class
+ambos son atributos de nuestros tags 
+los identificadores (id), permiten identificar 
+univocamente a nuestro tag dentro del documento
+las clases (class), permiten agrupar los tags que son similares

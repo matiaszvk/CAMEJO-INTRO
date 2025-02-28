@@ -1,0 +1,27 @@
+1)
+a) buscar las notas de gonza en el archivo notas.csv
+b) buscar las notas de gonza en todos los archivos dentro del directorio del ej1
+
+a)rta:
+grep -i "gonzalo martinez sastre" notas.csv
+
+b)rta:
+grep -r -i "gonzalo martinez sastre"
+
+------------------------------------------------------------------------------
+2) dado el archvio notas.csv, buscar todos aquellos 
+alumnos cuyas notas son mayores o iguales a 85
+
+2 rta:
+grep -i -E "(8[5-9])|(9[0-9])|100" notas.csv 
+2 rta(alternativa):
+grep -E '8[5-9]|9[0-9]|100' notas.csv
+
+------------------------------------------------------------------------------
+
+3)dado el listado alumnos, buscar aquellos cuya direccion de 
+email no este bien escrita
+
+3 rta:
+grep -i -v -E '[a-z]+@[a-z]+.[a-z]+' alumnos.txt 
+

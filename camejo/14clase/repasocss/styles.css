@@ -1,0 +1,37 @@
+.container {
+
+    display: flex;
+    flex-wrap: wrap;
+    height: 600px;
+    background-color:darkgoldenrod ;
+    width: 800px;
+    padding: 20px;
+    justify-content: center; 
+    align-content:center; 
+
+}
+
+/* flex-start
+flex-end
+center
+space-between
+space-around
+space-evenl */
+
+.box {
+    height: 200px;
+    width: 200px;
+    background-color: black;
+    display: inline-block;
+    margin: 2px;
+    transition: background-color 1s ease, height 1s ease;
+}
+
+
+.box:hover {
+
+    background-color: aqua;
+    transition: 1s;
+    height: 300px;
+
+}

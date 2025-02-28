@@ -1,0 +1,63 @@
+-serial
+para generar automaticos en una columna ej id
+
+-null y not null
+que la columna pueda tener null
+que la columna no pueda tener null
+
+
+-joins: inner, left, right, full outer
+
+-inner join: sentencia que muestra los registros que coinciden
+tanto en la tabla A como en la B
+
+-left join: muestra el conjunto completo de los registros de la tabla A, con los 
+registros que coincidan de la tabla B  (si es que los hay)
+
+-right join: es el reflejo de left join, muestra el conjunto de los registros
+de la tabla B con los los registrosque coincidan de la tabla A (si es que los hay)
+
+-full outer join: combina los resultados de left y right join, devuelve las coincidencias 
+de ambas tablas, si no hay coincidencia en una tabla se muestra todo null
+LEFT + RIGHT
+
+----------------------------------------ej JOINS------------------------------------------------------------
+
+fantico mastantouno RP
+
+departamento : id_departamento, nombre, edificio, piso
+empleado: id_empleado, dni, nombre, apellido, id_departamento
+
+-----------------------------------------INNER JOIN EXPLICITO
+
+SELECT
+FROM empleado
+INNER JOIN departamento
+ON empleado.id_departamento = departamento.id_departamento
+
+-----------------------------------------INNER JOIN IMPLICITA
+
+SELECT
+FROM empleado, departamento
+WHERE empleado.id_departamento = departamento.id_departamento
+
+-----------------------------------------LEFT JOIN
+SELECT
+FROM empleado
+LEFT JOIN departamento
+ON empleado.id_departamento = departamento.id_departamento
+
+-----------------------------------------RIGHT JOIN
+SELECT
+FROM empleado
+RIGHT JOIN departamento
+ON empleado.id_departamento = departamento.id_departamento
+
+MAS USADOS: INNER JOIN Y LEFT JOIN
+
+---------------------------------------NEXTVAL--------------------------------------------------------
+nextval se utiliza para obtener el siguiente valor de la secuencia manualmente.
+
+
+
+

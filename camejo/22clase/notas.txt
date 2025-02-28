@@ -1,0 +1,75 @@
+4:50 habla de SSR y SCR
+
+SSR: Server Side Rendering (renderizado a traves del servidor)
+-El HTML completo lo genera el ervidor y lo envia al cliente
+-ejemplo: Amazon, usa SRR para que el contneido de sus productos este disponible
+rapidamente para los motores de busqueda y garantizar una carga inicial rapidamente
+
+ 
+SCR: Client Side Rendering (renderizado a traves del cliente)
+-El HTML inicial es minimoy el cliente lo completa dinamicante con JavaScript
+-ejemplo: Facebook, usa CRS para ofrecer una experiencia interactiva, donde el
+contenido se a ctualiza constantemente sin recargar la pagina
+
+----------------------------------------------------------------------------------------------------------
+
+
+
+
+24:00 levantamos el back
+npm install
+(sabe que debe instalar el paquete cors porque ya esta establecido
+en dependencias en package-lok.json)
+npm run dev 
+docker compose up -d
+"! ojo el navegador suele cachear las respuestas"
+
+
+28:00 levantamos el front
+(tambein se podia hacer con python3)
+--con js:
+1-
+npm init -y "para crear un proyecto de js"
+2-
+npm install serve (dependencia que nos permite levantar servidores, es un 
+paquete para levantar un servidor en js)
+3- editamos el package.json para poner una dependencia en scripts 
+que nos permitira levantar el servidor con npm run start, el cual es el sig:
+"scripts": {
+    "start": "npx serve -l tcp://0.0.0.0:8000",
+    ...
+},
+0.0.0.0 para no tener problemas con docker
+4-
+ahora con el comandito puedo levantar el servidor con:
+npm run start
+
+38:00 
+manejar el error en el cual se borraron dos personajes de una
+
+40:50
+se borra los elementos y luego al elemento en si...
+"ojo, se corrigio lo de los personajes falta ahora los usuarios"
+
+44:30 VER RELATION MODE de prisma para borrar en cascada
+
+45:40 
+ponemos un formulario que nos permita para un usuario desbloquear un personaje
+
+
+1:48:00 mostrar imagenes
+
+
+UNA ENTIDAD NO ES UNA TABLA
+UNLOCK CHRARACTERS ERA UNA TABLA QUE ME RELACIOANAB DOS ENTIDADES PERO NO ES
+UNA ENTIDAD
+UNA ENTIDAD TIENE UNA PRESENCIA PROPIA
+
+2:15:15 ECHEMA PRISMA
+2:16:00 la tabla que relaciona tablas, echema.prisma
+2:27:20 GIT PULL REQUEST para cumplir
+con las especificacion de rivision del tp
+2:45:00 app.js character y users separados para mas prolijidad
+-leer documentacion express routing
+
+leer documentacion de express

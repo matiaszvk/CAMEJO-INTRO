@@ -1,0 +1,6 @@
+los pipelines conectan comandos, conecta la salida estandar del primer 
+programa con la entrada estandar del segundo programa
+el pipe NO labura con archivos
+
+                                  IMPORTANTE
+los pipe laburan con comandos mientras que > < laburan con archivos

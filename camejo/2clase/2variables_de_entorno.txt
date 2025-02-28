@@ -1,0 +1,25 @@
+a las variables de entorno se las llama com un $
+ej: echo $nombre
+
+
+                          DECLARACION DE UNA VARIABLE
+
+export nombre=valor
+
+
+                           COMO BORRAR UNA VARIABLE
+
+unset nombre
+
+
+	OJO LAS VARIABLES DURAN HASTA QUE MATES LA TERMINAL O ABRAS OTRA NUEVA
+       
+
+
+
+        OJARDO a la variable se la declara sin espaciado 
+        EJ: nombre="goo osoo"
+
+no toma el espacio ej: export hola mundo no es valida solo toma hola
+para que te tome el espacio hay que poner a la variable entre comillas dobles
+ej: export nomnre= " ghola dnids "

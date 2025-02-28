@@ -1,0 +1,39 @@
+                             CLASE PASADA RESUMEN
+
+
+$(COMANDO) esto se denomina subshell
+
+proceso_a | programa_b
+
+ESTO ES EQUIVALENTE A 
+
+programa_a > archivo
+programa_b < archivo
+ 
+
+
+                             CLASE ACTUAL
+
+para hacer operaciones e bash se usa:
+echo $((OPERACIONES ARITMETICAS))
+
+comando para secuencia de nuemros:
+
+seq valor 
+ej: seq 8
+
+seq desde hasta 
+ej: seq 50 99
+
+seq -s ' ' desde hasta
+ej: seq -s ' ' 5 8
+
+
+                              COMANDITOS UTILES
+
+whereis seq
+which seq
+
+$({VARIABLE}) esto es para evitar ambigüedades y para operaciones más complejas
+
+
